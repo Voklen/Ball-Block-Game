@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Fonts/ThatNogoFontCasual.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Start Button.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Fonts/Some Time Later.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 255
@@ -14,10 +13,6 @@ font_data = ExtResource( 1 )
 size = 200
 outline_color = Color( 0.368627, 0.313726, 0.101961, 1 )
 font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 128
-font_data = ExtResource( 3 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -50,14 +45,4 @@ custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "Replay!"
 flat = true
 script = ExtResource( 2 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 453.888
-margin_top = 446.096
-margin_right = 1353.89
-margin_bottom = 656.096
-rect_rotation = -8.0
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.87451, 1, 0, 1 )
-text = "Happy Birthday!"
 [connection signal="pressed" from="Replay Button" to="Replay Button" method="_on_Start_Button_pressed"]

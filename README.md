@@ -1,2 +1,2 @@
 # Ball-Block-Game
-A small game about pushing blocks off a platform
+A small game made in Godot about pushing blocks off a platform

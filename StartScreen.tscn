@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Fonts/Redkost Comic.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Fonts/ThatNogoFontCasual.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Scripts/Start Button.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 128
@@ -44,4 +44,4 @@ custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "Start!"
 flat = true
 script = ExtResource( 3 )
-[connection signal="pressed" from="Start Button" to="Start Button" method="_on_Start_Button_pressed"]
+[connection signal="pressed" from="Start Button" to="Start Button" method="_on_Button_pressed"]

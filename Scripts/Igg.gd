@@ -9,7 +9,7 @@ var gameOverAt_y = -20
 
 
 func _ready():
-	Level.blocksFallen = 0
+	pass
 
 
 func _physics_process(delta):

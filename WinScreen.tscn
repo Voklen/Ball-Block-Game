@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Fonts/ThatNogoFontCasual.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Quit Button.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 255
@@ -45,4 +46,17 @@ custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "Replay!"
 flat = true
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Quit"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Replay Button" to="Replay Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]

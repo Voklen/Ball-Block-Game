@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Fonts/Some Time Later.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Fonts/ThatNogoFontCasual.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Quit Button.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 200
@@ -13,6 +14,10 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 128
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 72
 font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
@@ -39,7 +44,7 @@ text = "You Lose"
 align = 1
 valign = 1
 
-[node name="Replay_Button" type="Button" parent="."]
+[node name="Replay" type="Button" parent="."]
 margin_left = 829.856
 margin_top = 656.482
 margin_right = 1224.86
@@ -50,4 +55,22 @@ custom_colors/font_color_hover = Color( 0.196078, 0, 1, 1 )
 text = "Replay"
 flat = true
 script = ExtResource( 3 )
-[connection signal="pressed" from="Replay_Button" to="Replay_Button" method="_on_Button_pressed"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 935.049
+margin_top = 896.089
+margin_right = 1076.05
+margin_bottom = 975.089
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+text = "Quit"
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Replay" to="Replay" method="_on_Button_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]

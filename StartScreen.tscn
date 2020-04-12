@@ -32,16 +32,22 @@ custom_constants/shadow_offset_y = -4
 text = "Ball-Block Game"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Start Button" type="Button" parent="."]
-margin_left = 652.041
-margin_top = 581.55
-margin_right = 1248.04
-margin_bottom = 833.55
+margin_left = 804.0
+margin_top = 603.0
+margin_right = 1116.0
+margin_bottom = 738.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.305882, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "Start!"
 flat = true
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Start Button" to="Start Button" method="_on_Button_pressed"]

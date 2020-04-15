@@ -15,19 +15,16 @@ func _ready():
 func _physics_process(delta):
 	if translation.y < gameOverAt_y:
 		Level.stop = 1
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene("res://Lose.tscn")
 	
-	if Input.is_action_pressed("ui_right"):
-		if velocity.x < maxSpeed:
+	if Input.is_action_pressed("ui_right") && velocity.x < maxSpeed:
 		 velocity.x += acceleration
-	if Input.is_action_pressed("ui_left"):
-		if velocity.x > -maxSpeed:
+	if Input.is_action_pressed("ui_left") && velocity.x > -maxSpeed:
 		 velocity.x -= acceleration
-	if Input.is_action_pressed("ui_down"):
-		if velocity.z < maxSpeed:
+	if Input.is_action_pressed("ui_down") && velocity.z < maxSpeed:
 		 velocity.z += acceleration
-	if Input.is_action_pressed("ui_up"):
-		if velocity.z > -maxSpeed:
+	if Input.is_action_pressed("ui_up") && velocity.z > -maxSpeed:
 		 velocity.z -= acceleration
 	
 	velocity.x = lerp(velocity.x,0,friction)

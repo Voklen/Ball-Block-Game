@@ -1,7 +1,7 @@
 extends KinematicBody
 
 var velocity = Vector3()
-var gravity = 1.8
+var gravity = 18
 var friction = 0.06
 var acceleration = 1
 var maxSpeed = 7
@@ -34,7 +34,7 @@ func _physics_process(delta):
 	velocity.z = lerp(velocity.z,0,friction)
 	rotateBall(velocity.z,0,-velocity.x)
 	velocity += Vector3(0,-gravity,0) * delta
-	move_and_slide(velocity)
+	velocity = move_and_slide(velocity)
 
 
 func rotateBall(x,y,z):
